@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+
+
 linkы_menu = [
         {'href': 'index', 'name': 'Главная', 'route': ''},
         {'href': 'products:index', 'name': 'Продукты', 'route': 'products/'},
