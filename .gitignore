@@ -128,3 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /stepshop/media/
+/stepshop/_db.sqlite3
+/stepshop/__db.sqlite3
