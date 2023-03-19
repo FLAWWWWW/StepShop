@@ -29,25 +29,25 @@ https://www.tooplate.com/view/2114-pixie
   </head>
 
   <body>
-  {{ user.username }}
-  {{ user.is_active }}
+<!--  {{ user.username }}-->
+<!--  {{ user.is_active }}-->
 
-  {% now "Y" %}
+<!--  {% now "Y" %}-->
 
-  {{ user.first_name|title }}
-  {#{ user.last_name|title }#}
+<!--  {{ user.first_name|title }}-->
+<!--  {#{ user.last_name|title }#}-->
 
-  {{ user.date_joined|date:"d m Y" }}
+<!--  {{ user.date_joined|date:"d m Y" }}-->
 
-  {% if user.is_authenticated %}
-    <h3>Аутефицирован</h3>
-  {% else %}
-    <h3>Не аутентифицирован</h3>
-  {% endif %}
+<!--  {% if user.is_authenticated %}-->
+<!--    <h3>Аутефицирован</h3>-->
+<!--  {% else %}-->
+<!--    <h3>Не аутентифицирован</h3>-->
+<!--  {% endif %}-->
 
-  {#% for i in user %#}
-    {#{ i }#}
-  {#% endfor %#}
+<!--  {#% for i in user %#}-->
+<!--    {#{ i }#}-->
+<!--  {#% endfor %#}-->
 
     <!-- Pre Header -->
     <div id="pre-header">
@@ -70,18 +70,18 @@ https://www.tooplate.com/view/2114-pixie
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="products.html">Products
+              <a class="nav-link" href="{% url 'index' %}">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'products:index' %}">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="{% url 'about' %}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contacts' %}">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -298,7 +298,7 @@ https://www.tooplate.com/view/2114-pixie
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 Company Name 
+              <p>Copyright &copy; {% now "Y" %} Company Name
                 
                 - Design: <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
             </div>
