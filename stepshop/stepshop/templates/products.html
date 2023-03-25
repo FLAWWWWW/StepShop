@@ -29,25 +29,6 @@ https://www.tooplate.com/view/2114-pixie
   </head>
 
   <body>
-  {{ user.username }}
-  {{ user.is_active }}
-
-  {% now "Y" %}
-
-  {{ user.first_name|title }}
-  {#{ user.last_name|title }#}
-
-  {{ user.date_joined|date:"d m Y" }}
-
-  {% if user.is_authenticated %}
-    <h3>Аутефицирован</h3>
-  {% else %}
-    <h3>Не аутентифицирован</h3>
-  {% endif %}
-
-  {#% for i in user %#}
-    {#{ i }#}
-  {#% endfor %#}
 
     <!-- Pre Header -->
     <div id="pre-header">
@@ -95,7 +76,6 @@ https://www.tooplate.com/view/2114-pixie
     <div class="featured container no-gutter">
 
         <div class="row posts">
-
             {% for product in products %}
             <div id="{{ product.id }}" class="item new col-md-4">
               <a href="single-product.html">

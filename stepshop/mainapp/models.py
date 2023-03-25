@@ -20,6 +20,7 @@ class ProductCategory(models.Model):
         verbose_name = "категория"
         verbose_name_plural = "категории"
 
+
 class Product(models.Model):
     category = models.ForeignKey(
         ProductCategory,
