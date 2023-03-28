@@ -11,41 +11,44 @@
 
     <div class="row">
         <div class="mx-auto col-4">
-            <form action="{% url 'auth:register' %}" class="form-horizontal" method="post"
+            {% if user.avatar %}
+            <div class="user_avatar">
+                <img src="{{ user.avatar.url }}" alt="{{ user.username }}" class="rounded-circle">
+            </div>
+            {% endif %}
+
+            <form action="{% url 'auth:edit' %}" class="form-horizontal" method="post"
                   enctype="multipart/form-data">
                 {% csrf_token %}
 
                 <p>
                     <label for="login">Логин:</label>
-                    {{ register_form.username }}
+                    {{ edit_form.username }}
                 </p>
                 <p>
                     <label>Имя:
-                    {{ register_form.first_name }}</label>
-                </p>
-                <p>
-                    <label>Пароль:
-                    {{ register_form.password1 }}</label>
-                </p>
-                <p>
-                    <label>Подтверждение пароля:
-                    {{ register_form.password2 }}</label>
+                    {{ edit_form.first_name }}</label>
                 </p>
                 <p>
                     <label>Email:
-                    {{ register_form.email }}</label>
+                    {{ edit_form.email }}</label>
                 </p>
                 <p>
                     <label>Возраст:
-                    {{ register_form.age }}</label>
+                    {{ edit_form.age }}</label>
                 </p>
                 <p>
                     <label>Аватарка:
-                    {{ register_form.avatar }}</label>
+                    {{ edit_form.avatar }}</label>
                 </p>
 
-            <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+            <button class="btn btn-primary" type="submit">Сохранить</button>
             </form>
+
+            <button class="btn btn-primary">
+                <a href="{% url 'index' %}" class="text-light">На главную</a>
+            </button>
+
         </div>
     </div>
 </div>
