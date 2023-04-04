@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="ru">
 
   <head>
 
@@ -56,9 +56,10 @@
             {% endif %}
 
             {% if basket %}
-              <a href="{#% url 'basket:view' %}" class="basket">
-                <span>{{ basket|length }}</span>
+              <a href="{% url 'basket:view' %}" class="basket mr-2">
+                <span>{{ basket.0.total_quantity }}</span>
               </a>
+            <span>${{ basket.0.total_cost|floatformat:"g" }}</span>
             {% endif %}
 
           </div>
