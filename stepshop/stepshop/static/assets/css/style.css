@@ -1,8 +1,8 @@
-.user_avatar img{
+.user_avatar {
     width: 320px;
 }
 
-.basket{
+.basket {
     display: flex;
     justify-content: flex-end;
     width: 28px;
@@ -12,17 +12,18 @@
     margin-bottom: 5px;
 }
 
-#pre-header span{
+#pre-header span {
     padding: 0;
 }
 
-#pre-header .basket span{
+#pre-header .basket span {
     width: 15px;
     height: 15px;
     font-size: 12px;
     padding: 0;
-    text-alight: center;
+    text-align: center;
     background-color: #3a8bcd;
     color: #fff;
     border-radius: 50%;
+
 }
