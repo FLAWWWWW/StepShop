@@ -55,13 +55,10 @@
           <div class="col-md-12">
             {% include 'includes/inc_category_menu.html' %}
           </div>
-
-
-
           <div class="col-md-12">
             <div class="owl-carousel owl-theme">
-              {% for product in products %}
-              <a href="single-product.html">
+              {% for product in same_products %}
+              <a href="{% url 'products:product' product.pk %}">
                 <div class="featured-item">
                   <img src="{% if product.image %} {{ product.image.url }} {% endif %}" alt="{{ product.name }}">
                   <h4>{{ product.name }}</h4>
