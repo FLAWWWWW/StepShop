@@ -58,8 +58,8 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
+#db.sqlite3
+#db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -127,6 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/stepshop/media/
+
+.idea/
+#/stepshop/media/
 /stepshop/_db.sqlite3
 /stepshop/__db.sqlite3
