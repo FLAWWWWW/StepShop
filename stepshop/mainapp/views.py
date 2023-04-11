@@ -51,6 +51,7 @@ def products(request, pk=None):
             category = get_object_or_404(ProductCategory, pk=pk)
             products_ = Product.objects.filter(category__pk=pk)
 
+
         context.update({'products':products_, 'category': category})
 
 
