@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from mainapp.models import ProductCategory, Product
 
+from basketapp.models import Basket
+
 linkы_menu = [
         {'href': 'index', 'name': 'Главная', 'route': ''},
         {'href': 'products:index', 'name': 'Продукты', 'route': 'products/'},
@@ -9,8 +11,15 @@ linkы_menu = [
         {'href': 'contacts', 'name': 'Контакты', 'route': 'contacts/'},
     ]
 
+def get_basket(user):
+    if user.is_authenticated:
+         return Basket.objects.filter(user=user)
+    return []
+
 def index(request):
     title = "главная"
+
+    basket = get_basket(request.user)
 
     products = Product.objects.all()[:2]
     categories = ProductCategory.objects.all()
@@ -20,6 +29,7 @@ def index(request):
         'links_menu': linkы_menu,
         'products': products,
         'categories': categories,
+        'basket': basket,
     }
 
     return render(request, 'index.html', context)

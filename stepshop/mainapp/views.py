@@ -27,9 +27,6 @@ def get_same_products(product):
 
 def products(request, pk=None):
     title = "продукты/каталог"
-
-
-
     products = Product.objects.all().order_by('-price') #[:2]
     categories = ProductCategory.objects.all()
 
