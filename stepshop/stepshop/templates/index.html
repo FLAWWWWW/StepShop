@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load mytags %}
 
 {% block title %}{{ title|title }}{% endblock %}
 {% block content %}
@@ -11,20 +12,18 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="caption">
-                    <h2>Ecommerce HTML Template</h2>
+                    <h2>Горячо! Покупай!</h2>
                     <div class="line-dec"></div>
-                    {% for product in hot_product %}
-                        <div id="{{ product.id }}" class="item new col-md-4">
-                            <a href="{% url 'products:product' product.pk %}">
+                        <div id="{{ hot_product.id }}" class="">
+                            <a href="{% url 'products:product' hot_product.pk %}">
                                 <div class="featured-item">
-                                    <img src="{% if product.image %} {{ product.image.url }} {% endif %}"
+                                    <img src="{{ hot_product.image|media_folder_products }}"
                                          alt="{{ product.name }}">
-                                    <h4>{{ product.name }}</h4>
-                                    <h6>${{ product.price }}</h6>
+                                    <h4>{{ hot_product.name }}</h4>
+                                    <h6>${{ hot_product.price }}</h6>
                                 </div>
                             </a>
                         </div>
-                    {% endfor %}
                     <div class="main-button">
                         <a href="#">Order Now!</a>
                     </div>
@@ -48,7 +47,7 @@
                     {% for product in products %}
                     <a href="{% url 'products:product' product.pk %}">
                         <div class="featured-item">
-                            <img src="{% if product.image %} {{ product.image.url }} {% endif %}"
+                            <img src="{{ product.image|media_folder_products }}"
                                  alt="{{ product.name }}">
                             <h4>{{ product.name }}</h4>
                             <h6>${{ product.price }}</h6>

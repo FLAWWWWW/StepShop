@@ -1,3 +1,5 @@
+from random import sample
+
 from django.shortcuts import render
 
 from mainapp.models import ProductCategory, Product
@@ -11,6 +13,10 @@ linkы_menu = [
         {'href': 'contacts', 'name': 'Контакты', 'route': 'contacts/'},
     ]
 
+def get_hot_product():
+    products = Product.objects.all()
+    return sample(list(products), 1)[0]
+
 def get_basket(user):
     if user.is_authenticated:
          return Basket.objects.filter(user=user)
@@ -21,8 +27,9 @@ def index(request):
 
     basket = get_basket(request.user)
 
-    products = Product.objects.all()[:2]
+    products = Product.objects.all()
     categories = ProductCategory.objects.all()
+    hot_product = get_hot_product()
 
     context = {
         'title': title,
@@ -30,6 +37,7 @@ def index(request):
         'products': products,
         'categories': categories,
         'basket': basket,
+        'hot_product': hot_product,
     }
 
     return render(request, 'index.html', context)
