@@ -30,6 +30,7 @@ def get_same_products(product):
     return same_products
 
 
+
 def products(request, pk=None):
     title = "продукты/каталог"
     products = Product.objects.all().order_by('-price') #[:2]

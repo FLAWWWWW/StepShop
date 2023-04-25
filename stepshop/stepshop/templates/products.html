@@ -10,7 +10,7 @@
     <div class="featured container no-gutter">
 
         <div class="row posts">
-            {% for product in products %}
+            {% for product in page_obj %}
             <div id="{{ product.id }}" class="item new col-md-4">
               <a href="{% url 'products:product' product.pk %}">
                 <div class="featured-item">
@@ -30,9 +30,9 @@
         <div class="row">
           <div class="col-md-12">
             <ul>
-              <li class="current-page"><a href="?page=1">1</a></li>
-              <li><a href="?page=2">2</a></li>
-              <li><a href="?page=3">3</a></li>
+              <li {% if page_obj.number == 1 %} class="current-page" {% endif %}><a href="?page=1">1</a></li>
+              <li {% if page_obj.number == 2 %} class="current-page" {% endif %}><a href="?page=2">2</a></li>
+              <li {% if page_obj.number == 3 %} class="current-page" {% endif %}><a href="?page=3">3</a></li>
 <!--              <li><a href=""><i class="fa fa-angle-right"></i></a></li>-->
             </ul>
           </div>

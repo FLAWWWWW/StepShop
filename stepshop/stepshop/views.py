@@ -43,24 +43,25 @@ def index(request):
     return render(request, 'index.html', context)
 
 def contacts(request):
-    return render(request, 'contacts.html')
-
-def contacts(request):
     title = "контакты"
+    basket = get_basket(request.user)
 
     context = {
         'title': title,
         'links_menu': linkы_menu,
+        'basket': basket,
     }
 
     return render(request, 'contacts.html', context)
 
 def about(request):
     title = "о нас"
+    basket = get_basket(request.user)
 
     context = {
         'title': title,
         'links_menu': linkы_menu,
+        'basket': basket,
     }
 
     return render(request, 'about.html', context)
