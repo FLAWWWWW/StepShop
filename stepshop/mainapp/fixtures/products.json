@@ -6,12 +6,13 @@
       "category": 1,
       "name": "Бобёр обычный",
       "image": "product_images/bobr.jpg",
-      "short_desc": "",
-      "description": "",
+      "short_desc": "Бобёр обыкновенный, очень умён и...",
+      "description": "Бобёр обыкновенный, очень умён и сообразителен",
       "price": "5000.00",
       "quantity": 8,
-      "created_at": "2023-03-07T15:30:42.939Z",
-      "updated_at": "2023-03-09T14:04:19.744Z"
+      "is_active": true,
+      "created_at": "2023-03-14T15:10:50.888Z",
+      "updated_at": "2023-03-30T13:56:53.295Z"
     }
   },
   {
@@ -25,8 +26,137 @@
       "description": "",
       "price": "123.25",
       "quantity": 5,
-      "created_at": "2023-03-09T13:43:58.484Z",
-      "updated_at": "2023-03-09T14:03:01.447Z"
+      "is_active": true,
+      "created_at": "2023-03-14T15:10:50.888Z",
+      "updated_at": "2023-03-14T15:10:50.888Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "Бобёр крутой",
+      "image": "product_images/bobr-krut.jpg",
+      "short_desc": "Очень крутой",
+      "description": "Он круче всех",
+      "price": "6999.00",
+      "quantity": 2,
+      "is_active": true,
+      "created_at": "2023-04-06T13:38:51.906Z",
+      "updated_at": "2023-04-06T13:38:51.906Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 3,
+      "name": "Невидимые кеды",
+      "image": "",
+      "short_desc": "Я вот всё вижу",
+      "description": "Я вижу, а вы?",
+      "price": "100.00",
+      "quantity": 10,
+      "is_active": true,
+      "created_at": "2023-04-20T14:48:21.002Z",
+      "updated_at": "2023-04-20T14:48:21.002Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 8,
+    "fields": {
+      "category": 1,
+      "name": "Малыш Бобр",
+      "image": "product_images/bobr-malysh.jpg",
+      "short_desc": "Милый бобёр",
+      "description": "Милый бобёр",
+      "price": "150.00",
+      "quantity": 12,
+      "is_active": true,
+      "created_at": "2023-04-25T13:11:03.847Z",
+      "updated_at": "2023-04-25T13:11:11.246Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 9,
+    "fields": {
+      "category": 1,
+      "name": "Прожорливый бобёр",
+      "image": "product_images/bobr-eat.jpg",
+      "short_desc": "Он очень любит кушать",
+      "description": "Он очень любит кушать",
+      "price": "300.00",
+      "quantity": 21,
+      "is_active": true,
+      "created_at": "2023-04-25T13:12:02.543Z",
+      "updated_at": "2023-04-25T13:12:02.543Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 10,
+    "fields": {
+      "category": 1,
+      "name": "Злой Бобр",
+      "image": "product_images/bobr-zloi.jpg",
+      "short_desc": "Аккуратнее с ним",
+      "description": "Аккуратнее с ним",
+      "price": "10.00",
+      "quantity": 30,
+      "is_active": true,
+      "created_at": "2023-04-25T13:13:33.462Z",
+      "updated_at": "2023-04-25T13:13:33.462Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 11,
+    "fields": {
+      "category": 3,
+      "name": "Золотые кеды",
+      "image": "product_images/zolotoi-ked.jpg",
+      "short_desc": "Непростые, а золотые",
+      "description": "Непростые, а золотые",
+      "price": "10000.00",
+      "quantity": 6,
+      "is_active": true,
+      "created_at": "2023-04-25T13:16:50.123Z",
+      "updated_at": "2023-04-25T13:16:50.123Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 12,
+    "fields": {
+      "category": 3,
+      "name": "Радужные кеды",
+      "image": "product_images/rainbow-ked.jpg",
+      "short_desc": "Мы никого не поддерживаем",
+      "description": "Мы никого не поддерживаем",
+      "price": "30.00",
+      "quantity": 31,
+      "is_active": true,
+      "created_at": "2023-04-25T13:17:21.227Z",
+      "updated_at": "2023-04-25T13:19:45.038Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 13,
+    "fields": {
+      "category": 3,
+      "name": "Рванные кеды",
+      "image": "product_images/gryazni-ked.jpg",
+      "short_desc": "Это последний писк моды",
+      "description": "Это последний писк моды",
+      "price": "1.00",
+      "quantity": 40,
+      "is_active": true,
+      "created_at": "2023-04-25T13:17:56.966Z",
+      "updated_at": "2023-04-25T13:17:56.966Z"
     }
   }
 ]
