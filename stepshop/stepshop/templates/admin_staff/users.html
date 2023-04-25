@@ -23,6 +23,7 @@
                             <th>Активный</th>
                             <th>Вход</th>
                             <th>Удалить</th>
+                            <th>Редактировать</th>
                         </tr>
                         </thead>
                         <tfoot>
@@ -35,6 +36,7 @@
                             <th>Активный</th>
                             <th>Вход</th>
                             <th>Удалить</th>
+                            <th>Редактировать</th>
                         </tr>
                         </tfoot>
                         <tbody>
@@ -60,8 +62,13 @@
                                 </td>
                                 <td>{{ user.last_login }}</td>
                                 <td>
-                                    <a {% if not user.is_active %} class="invisible" {% endif %} href="{#% url 'admin_staff:user_delete' pk=user.id %#}">
+                                    <a {% if not user.is_active %} class="invisible" {% endif %} href="{% url 'admin_staff:user_delete' pk=user.id %}">
                                         <i class="fa fa-times-circle"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a {% if not user.is_active %} class="invisible" {% endif %} href="{% url 'admin_staff:user_update' pk=user.id %}">
+                                        <i class="fa fa-pencil"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -72,8 +79,8 @@
                     <div class="pagination">
                         <span class="step-links">
                             {% if page_obj.has_previous %}
-                                <a href="?page=1">&laquo; первая</a>
-                                <a href="?page={{ page_obj.previous_page_number }}">предыдущая</a>
+                                <a href="?page=1"><i class="fa fa-fast-backward"></i></a>
+                                <a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-backward"></i></a>
                             {% endif %}
                         </span>
                         <span class="current">
@@ -83,8 +90,8 @@
                         </span>
                         <span class="step-links">
                             {% if page_obj.has_next %}
-                                <a href="?page={{ page_obj.next_page_number }}">следующая</a>
-                                <a href="?page={{ page_obj.paginator.num_pages }}">последняя &raquo;</a>
+                                <a href="?page={{ page_obj.next_page_number }}"> <i class="fa fa-forward"></i> </a>
+                                <a href="?page={{ page_obj.paginator.num_pages }}"> <i class="fa fa-fast-forward"> </i></a>
                             {% endif %}
                         </span>
                     </div>

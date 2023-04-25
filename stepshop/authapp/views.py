@@ -29,7 +29,7 @@ def login(request):
     context = {
         'title': title,
         'login_form': login_form,
-        'next' : _next,
+        'next': _next,
     }
 
     return render(request, 'auth/login.html', context)
@@ -59,6 +59,7 @@ def register(request):
 
     return render(request, 'auth/register.html', context)
 
+
 def edit(request):
     title = 'редактирование'
 
@@ -67,13 +68,13 @@ def edit(request):
 
         if edit_form.is_valid():
             edit_form.save()
-            return  HttpResponseRedirect(reverse('auth:edit'))
+            return HttpResponseRedirect(reverse('auth:edit'))
     else:
         edit_form = ShopUserEditForm(instance=request.user)
 
     context = {
-        'title' : title,
-        'edit_form' : edit_form,
+        'title': title,
+        'edit_form': edit_form,
     }
 
     return render(request, 'auth/edit.html', context)

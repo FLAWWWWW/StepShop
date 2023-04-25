@@ -32,12 +32,12 @@
     <div id="pre-header">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 d-flex justify-content-end align-items-center text-light">
+          <div class="col-md-12 d-flex justify-content-end align-items-center text-light" >
 
           {% if user.is_authenticated %}
             {% if user.is_superuser %}
               <a href="{% url 'admin_staff:users'%}" class="nav-link ">
-                <span class="text-danger">Админка - 100p </span>
+                <i class="fa fa-cog " style="color: rgb(255, 0, 0)"></i>
               </a>
             |
             {% endif %}
@@ -47,11 +47,11 @@
 
             |
               <a href="{% url 'auth:logout' %}" class="nav-link">
-                <span>Выйти</span>
+                <i class="fa fa-sign-out" style="color: rgb(255, 255, 255)"></i>
               </a>
             {% else %}
                 <a href="{% url 'auth:login' %}" class="nav-link">
-                  <span>Войти</span>
+                  <i class="fa fa-sign-in" style="color: rgb(255, 255, 255)"></i>
                 </a>
             {% endif %}
 
@@ -82,26 +82,26 @@
           <div class="col-md-12">
             <div class="section-heading">
               <div class="line-dec"></div>
-              <h1>Subscribe on PIXIE now!</h1>
+              <h1>Подпишись!</h1>
             </div>
           </div>
           <div class="col-md-8 offset-md-2">
             <div class="main-content">
-              <p>Integer vel turpis ultricies, lacinia ligula id, lobortis augue. Vivamus porttitor dui id dictum efficitur. Phasellus vel interdum elit.</p>
+              <p>Если ты подпишешься то получишь кучу спама!</p>
               <div class="container">
                 <form id="subscribe" action="" method="get">
                   <div class="row">
                     <div class="col-md-7">
                       <fieldset>
                         <input name="email" type="text" class="form-control" id="email"
-                        onfocus="if(this.value == 'Your Email...') { this.value = ''; }"
-                    	onBlur="if(this.value == '') { this.value = 'Your Email...';}"
-                    	value="Your Email..." required="">
+                        onfocus="if(this.value == 'Ваш Email...') { this.value = ''; }"
+                    	onBlur="if(this.value == '') { this.value = 'Ваш Email...';}"
+                    	value="Ваш Email..." required="">
                       </fieldset>
                     </div>
                     <div class="col-md-5">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">Subscribe Now!</button>
+                        <button type="submit" id="form-submit" class="button">Подпишись прямо сейчас!</button>
                       </fieldset>
                     </div>
                   </div>
@@ -126,17 +126,6 @@
             </div>
           </div>
           <div class="col-md-12">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">How It Works ?</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-12">
             <div class="social-icons">
               <ul>
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -158,9 +147,9 @@
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 Company Name
+              <p>FlawWorks Inc &copy; {% now "Y" %}
 
-                - Design: <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
+                - Design: <a rel="nofollow" href="https://vk.com/flawworks">FlawWorks</a></p>
             </div>
           </div>
         </div>
